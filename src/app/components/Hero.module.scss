@@ -1,0 +1,15 @@
+.hero {
+  margin-bottom: 30px;
+  h1 {
+    font-size: 84px;
+    color: var(--main-color);
+  }
+  .icons {
+    display: flex;
+    gap: 10px;
+    svg {
+      height: 30px;
+      color: var(--main-color);
+    }
+  }
+}
