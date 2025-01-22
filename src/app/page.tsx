@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Hero></Hero>
-      <About></About>
-      <List items={testProps} title="experience"></List>
-      <List items={testProps} title="education"></List>
+      <div className={styles.content}>
+        <About></About>
+        <List items={testProps} title="experience"></List>
+        <List items={testProps} title="education"></List>
+      </div>
     </main>
   );
 }

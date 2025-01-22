@@ -40,7 +40,7 @@ const Item: React.FC<ListItemProps> = (props: ListItemProps) => {
             </div>
           )}
         </div>
-        <p>{props.years}</p>
+        <p className={styles.years}>{props.years}</p>
       </div>
     </div>
   );

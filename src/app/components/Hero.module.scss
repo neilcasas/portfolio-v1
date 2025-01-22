@@ -1,8 +1,9 @@
 .hero {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   h1 {
     font-size: 84px;
     color: var(--main-color);
+    font-family: var(--header-font);
   }
   .icons {
     display: flex;
