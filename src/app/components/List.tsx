@@ -3,6 +3,7 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "./List.module.scss";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Subheader } from "./Subheader";
 import MetaLogo from "../../../public/meta-logo.webp";
@@ -16,7 +17,7 @@ type ListItemProps = {
   href?: string;
 };
 
-const Item: React.FC<ListItemProps> = (props: ListItemProps) => {
+const Item = (props: ListItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -24,7 +25,12 @@ const Item: React.FC<ListItemProps> = (props: ListItemProps) => {
   };
 
   return (
-    <div className={styles.listItem}>
+    <motion.div
+      className={styles.listItem}
+      initial={{ opacity: 0, translateX: "-20%" }}
+      whileInView={{ opacity: 1, translateX: "0%" }}
+      viewport={{ once: true }}
+    >
       <div className={styles.imgContainer}>
         <Image src={props.image} alt={props.title} />
       </div>
@@ -42,7 +48,7 @@ const Item: React.FC<ListItemProps> = (props: ListItemProps) => {
         </div>
         <p className={styles.years}>{props.years}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

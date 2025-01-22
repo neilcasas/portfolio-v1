@@ -1,4 +1,7 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import styles from "./Hero.module.scss";
 import {
@@ -7,9 +10,14 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-export const Hero: React.FC = () => {
+export const Hero = () => {
   return (
-    <div className={styles.hero}>
+    <motion.div
+      className={styles.hero}
+      initial={{ opacity: 0, translateX: "-20%" }}
+      whileInView={{ opacity: 1, translateX: "0%" }}
+      viewport={{ once: true }}
+    >
       <h1 className={styles.h1}>neil casas</h1>
       <div className={styles.icons}>
         <Link href="https://github.com/neilcasas" target="_blank">
@@ -22,6 +30,6 @@ export const Hero: React.FC = () => {
           <FontAwesomeIcon icon={faInstagram} />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

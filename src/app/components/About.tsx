@@ -1,9 +1,17 @@
+"use client";
+
 import { Subheader } from "./Subheader";
+import { motion } from "framer-motion";
 import styles from "./About.module.scss";
 
 export const About: React.FC = () => {
   return (
-    <div className={styles.about}>
+    <motion.div
+      className={styles.about}
+      initial={{ opacity: 0, translateX: "-20%" }}
+      whileInView={{ opacity: 1, translateX: "0%" }}
+      viewport={{ once: true }}
+    >
       <Subheader text="about me" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -14,6 +22,6 @@ export const About: React.FC = () => {
         faucibus malesuada. Class aptent taciti sociosqu ad litora torquent per
         conubia nostra, per inceptos himenaeos.
       </p>
-    </div>
+    </motion.div>
   );
 };
