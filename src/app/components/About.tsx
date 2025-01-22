@@ -1,7 +1,7 @@
 import { Subheader } from "./Subheader";
 import styles from "./About.module.scss";
 
-export function About() {
+export const About: React.FC = () => {
   return (
     <div className={styles.about}>
       <Subheader text="about" />
@@ -23,4 +23,4 @@ export function About() {
       </p>
     </div>
   );
-}
+};

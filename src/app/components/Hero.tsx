@@ -7,7 +7,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-export function Hero() {
+export const Hero: React.FC = () => {
   return (
     <div className={styles.hero}>
       <h1 className={styles.h1}>neil casas</h1>
@@ -24,4 +24,4 @@ export function Hero() {
       </div>
     </div>
   );
-}
+};

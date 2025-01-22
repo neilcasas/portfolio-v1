@@ -1,0 +1,32 @@
+.listItem {
+  display: flex;
+  width: 100%;
+
+  .imgContainer {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .listContent {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+
+    .listText {
+      color: var(--main-color);
+      display: flex;
+      flex-direction: column;
+    }
+    .description {
+      max-height: 0;
+    }
+  }
+}

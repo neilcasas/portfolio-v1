@@ -13,14 +13,15 @@ body {
 }
 
 :root {
-  --header-font: "Poppins";
+  --header-font: "Playfair Display";
   --main-color: rgb(19, 19, 19);
   --regular-font: "Poppins";
-  --regular-color: rgb(139, 139, 139);
+  --regular-color: rgb(129, 129, 129);
   --background-color: rgb(241, 241, 241);
 }
 
 body.dark {
   --main-color: rgb(241, 241, 241);
   --background-color: rgb(19, 19, 19);
+  --regular-color: rgb(161, 161, 161);
 }
