@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   margin-bottom: 10px;
+  cursor: pointer;
 
   .imgContainer {
     width: 60px;
@@ -31,6 +32,7 @@
       .description {
         max-height: 0px;
         overflow: hidden;
+        margin-top: 20px;
         transition: max-height 0.3s ease;
         &.show {
           max-height: 100%;
@@ -43,5 +45,5 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }

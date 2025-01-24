@@ -16,6 +16,7 @@ export const Hero = () => {
       className={styles.hero}
       initial={{ opacity: 0, translateX: "-20%" }}
       whileInView={{ opacity: 1, translateX: "0%" }}
+      transition={{ duration: "0.8", type: "spring" }}
       viewport={{ once: true }}
     >
       <h1 className={styles.h1}>Neil Casas</h1>

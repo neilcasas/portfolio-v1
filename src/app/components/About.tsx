@@ -6,14 +6,14 @@ import styles from "./About.module.scss";
 
 export const About: React.FC = () => {
   return (
-    <motion.div
-      className={styles.about}
-      initial={{ opacity: 0, translateX: "-20%" }}
-      whileInView={{ opacity: 1, translateX: "0%" }}
-      viewport={{ once: true }}
-    >
+    <div className={styles.about}>
       <Subheader text="About Me" />
-      <p>
+      <motion.p
+        initial={{ opacity: 0, translateX: "-20%" }}
+        whileInView={{ opacity: 1, translateX: "0%" }}
+        transition={{ duration: "0.8", type: "spring" }}
+        viewport={{ once: true }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         accumsan fringilla dictum. Morbi commodo maximus nisl non aliquam. Fusce
         tincidunt dolor quis hendrerit posuere. Donec gravida nunc diam.
@@ -21,7 +21,7 @@ export const About: React.FC = () => {
         at sapien consectetur porta vitae in est. Phasellus imperdiet nisi a
         faucibus malesuada. Class aptent taciti sociosqu ad litora torquent per
         conubia nostra, per inceptos himenaeos.
-      </p>
-    </motion.div>
+      </motion.p>
+    </div>
   );
 };
