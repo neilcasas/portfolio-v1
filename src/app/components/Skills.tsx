@@ -10,8 +10,8 @@ type SkillProps = {
 const Skill: React.FC<SkillProps> = ({ text }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, translateX: "-50%" }}
-      whileInView={{ opacity: 1, translateX: "0%" }}
+      initial={{ opacity: 0, translateY: "50%" }}
+      whileInView={{ opacity: 1, translateY: "0%" }}
       transition={{ duration: "0.8", type: "spring" }}
       viewport={{ once: true }}
       className={styles.skill}
