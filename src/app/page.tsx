@@ -10,8 +10,8 @@ export default function Home() {
       <Hero></Hero>
       <div className={styles.content}>
         <About></About>
-        <List items={testProps} title="experience"></List>
-        <List items={testProps} title="education"></List>
+        <List items={testProps} title="Experience"></List>
+        <List items={testProps} title="Education"></List>
         <Skills skills={skillsData}></Skills>
       </div>
     </main>

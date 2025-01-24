@@ -12,7 +12,7 @@ export const About: React.FC = () => {
       whileInView={{ opacity: 1, translateX: "0%" }}
       viewport={{ once: true }}
     >
-      <Subheader text="about me" />
+      <Subheader text="About Me" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         accumsan fringilla dictum. Morbi commodo maximus nisl non aliquam. Fusce

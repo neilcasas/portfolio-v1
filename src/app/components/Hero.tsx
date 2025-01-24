@@ -18,7 +18,7 @@ export const Hero = () => {
       whileInView={{ opacity: 1, translateX: "0%" }}
       viewport={{ once: true }}
     >
-      <h1 className={styles.h1}>neil casas</h1>
+      <h1 className={styles.h1}>Neil Casas</h1>
       <div className={styles.icons}>
         <Link href="https://github.com/neilcasas" target="_blank">
           <FontAwesomeIcon icon={faGithub} />

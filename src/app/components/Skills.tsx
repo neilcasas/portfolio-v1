@@ -34,7 +34,7 @@ export const skillsData: string[] = [
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <div className={styles.mainContainer}>
-      <Subheader text="skills" />
+      <Subheader text="Skills" />
       <div className={styles.skills}>
         {skills.map((skill, index) => (
           <Skill key={index} text={skill} />
