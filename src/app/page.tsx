@@ -2,6 +2,7 @@ import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { testProps, List } from "./components/List";
 import { skillsData, Skills } from "./components/Skills";
+import { Projects, mockProjects } from "./components/Projects";
 import Profile from "../../public/profile.jpg";
 import styles from "./page.module.scss";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <List items={testProps} title="Experience"></List>
         <List items={testProps} title="Education"></List>
         <Skills skills={skillsData}></Skills>
+        <Projects projects={mockProjects} />
       </div>
     </main>
   );

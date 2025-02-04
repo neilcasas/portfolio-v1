@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "./Projects.module.scss";
 import { Subheader } from "./Subheader";
+import ProjectImage from "../../../public/cat.jpeg"; // Mock image
 
 type ProjectProps = {
   title: string;
@@ -37,12 +38,46 @@ export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   );
 };
 
-export const Projects: React.FC<ProjectProps[]> = (props: ProjectProps[]) => {
+export const mockProjects: ProjectProps[] = [
+  {
+    title: "Project One",
+    description: "This is a description for project one.",
+    github: "https://github.com/project-one",
+    skills: ["React", "TypeScript", "Next.js"],
+    website: "https://project-one.com",
+    image: ProjectImage,
+  },
+  {
+    title: "Project Two",
+    description: "This is a description for project two.",
+    github: "https://github.com/project-two",
+    skills: ["JavaScript", "HTML", "CSS"],
+    image: ProjectImage,
+  },
+  {
+    title: "Project Three",
+    description: "This is a description for project two.",
+    github: "https://github.com/project-two",
+    skills: ["JavaScript", "HTML", "CSS"],
+    image: ProjectImage,
+  },
+  {
+    title: "Project Four",
+    description: "This is a description for project two.",
+    github: "https://github.com/project-two",
+    skills: ["JavaScript", "HTML", "CSS"],
+    image: ProjectImage,
+  },
+];
+
+export const Projects: React.FC<{ projects: ProjectProps[] }> = ({
+  projects,
+}) => {
   return (
     <div className={styles.projectsContainer}>
-      <Subheader text="projects" />
+      <Subheader text="Projects" />
       <div className={styles.projects}>
-        {props.map((project, key) => (
+        {projects.map((project, key) => (
           <Project {...project} key={key} />
         ))}
       </div>

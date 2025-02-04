@@ -1,12 +1,11 @@
+"use client";
 import styles from "./Subheader.module.scss";
 import { motion } from "framer-motion";
-type SubheaderProps = {
-  text: string;
-};
+// type SubheaderProps = {
+//   text: string
+// };
 
-export const Subheader: React.FC<SubheaderProps> = ({
-  text,
-}: SubheaderProps) => {
+export const Subheader: React.FC<{ text: string }> = ({ text }) => {
   return (
     <motion.h2
       initial={{ opacity: 0, translateX: "-20%" }}
