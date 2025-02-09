@@ -6,6 +6,10 @@ import styles from "./Projects.module.scss";
 import { Subheader } from "./Subheader";
 import { Skill } from "./Skills";
 import ProjectImage from "../../../public/cat.jpeg";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 type ProjectProps = {
   title: string;
@@ -36,10 +40,16 @@ export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
         ))}
       </div>
       <div className={styles.buttons}>
-        <div>
-          <a href={props.github}>GitHub</a>
-          {props.website && <a href={props.website}>Website</a>}
+        <div className={styles.button}>
+          <FontAwesomeIcon icon={faGithub} />
+          <Link href={props.github}>GitHub</Link>
         </div>
+        {props.website && (
+          <div className={styles.button}>
+            <FontAwesomeIcon icon={faGlobe} />
+            <Link href={props.website}>Website</Link>
+          </div>
+        )}
       </div>
     </motion.div>
   );
