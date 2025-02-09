@@ -23,6 +23,18 @@ body {
       rgba(23, 23, 23, 1) 100%
     );
   }
+
+  &.light {
+    --main-color: rgb(19, 19, 19);
+    --regular-color: rgb(59, 59, 59);
+    --accent-color: rgb(241, 241, 241);
+    --background-color: rgb(236, 231, 247);
+    --background-gradient: linear-gradient(
+      0deg,
+      rgba(236, 231, 247, 1) 0%,
+      rgba(246, 246, 246, 1) 100%
+    );
+  }
 }
 
 :root {
