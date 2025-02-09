@@ -7,7 +7,7 @@ type SkillProps = {
   text: string;
 };
 
-const Skill: React.FC<SkillProps> = ({ text }) => {
+export const Skill: React.FC<SkillProps> = ({ text }) => {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: "50%" }}

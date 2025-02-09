@@ -1,9 +1,6 @@
 "use client";
 import styles from "./Subheader.module.scss";
 import { motion } from "framer-motion";
-// type SubheaderProps = {
-//   text: string
-// };
 
 export const Subheader: React.FC<{ text: string }> = ({ text }) => {
   return (

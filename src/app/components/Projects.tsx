@@ -1,8 +1,11 @@
+"use client";
 import { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Projects.module.scss";
 import { Subheader } from "./Subheader";
-import ProjectImage from "../../../public/cat.jpeg"; // Mock image
+import { Skill } from "./Skills";
+import ProjectImage from "../../../public/cat.jpeg";
 
 type ProjectProps = {
   title: string;
@@ -15,7 +18,13 @@ type ProjectProps = {
 
 export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
   return (
-    <div className={styles.project}>
+    <motion.div
+      initial={{ opacity: 0, translateX: "-20%" }}
+      whileInView={{ opacity: 1, translateX: "0%" }}
+      transition={{ duration: "0.8", type: "spring" }}
+      viewport={{ once: true }}
+      className={styles.project}
+    >
       <div className={styles.imgContainer}>
         <Image src={props.image} alt={props.title} />
       </div>
@@ -23,9 +32,7 @@ export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div>{props.description}</div>
       <div className={styles.skills}>
         {props.skills.map((skill, key) => (
-          <div key={key} className={styles.skill}>
-            {skill}
-          </div>
+          <Skill key={key} text={skill} />
         ))}
       </div>
       <div className={styles.buttons}>
@@ -34,7 +41,7 @@ export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
           {props.website && <a href={props.website}>Website</a>}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
