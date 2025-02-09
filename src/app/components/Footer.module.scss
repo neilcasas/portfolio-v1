@@ -1,0 +1,18 @@
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  color: var(--regular-color);
+
+  a {
+    color: var(--regular-color);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+}
