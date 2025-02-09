@@ -1,7 +1,7 @@
 .hero {
   margin-bottom: 50px;
   h1 {
-    font-size: 84px;
+    font-size: var(--header-size);
     color: var(--main-color);
     font-family: var(--header-font);
   }
@@ -16,14 +16,6 @@
       &:hover {
         transform: scale(1.2);
       }
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .hero {
-    h1 {
-      font-size: 54px;
     }
   }
 }

@@ -28,8 +28,8 @@ export const Project: React.FC<ProjectProps> = (props: ProjectProps) => {
       <div className={styles.imgContainer}>
         <Image src={props.image} alt={props.title} />
       </div>
-      <div>{props.title}</div>
-      <div>{props.description}</div>
+      <div className={styles.title}>{props.title}</div>
+      <div className={styles.description}>{props.description}</div>
       <div className={styles.skills}>
         {props.skills.map((skill, key) => (
           <Skill key={key} text={skill} />

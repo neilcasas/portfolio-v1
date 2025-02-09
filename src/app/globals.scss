@@ -8,6 +8,7 @@
 
 body {
   font-family: var(--regular-font);
+  font-size: var(--regular-size);
   background: var(--background-color);
   background: var(--background-gradient);
   color: var(--regular-color);
@@ -51,7 +52,9 @@ body {
   );
   --header-size: 84px;
   --subheader-size: 36px;
+  --regular-size: 16px;
 }
+
 @media (prefers-color-scheme: dark) {
   body {
     --main-color: rgb(241, 241, 241);
@@ -75,5 +78,20 @@ body {
       rgba(236, 231, 247, 1) 0%,
       rgba(246, 246, 246, 1) 100%
     );
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --header-size: 54px;
+    --subheader-size: 36px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --header-size: 40px;
+    --subheader-size: 30px;
+    --regular-size: 14px;
   }
 }
