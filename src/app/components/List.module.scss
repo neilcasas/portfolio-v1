@@ -19,24 +19,22 @@
   }
   .listContent {
     display: flex;
+    flex-direction: column;
     flex: 1;
-    justify-content: space-between;
-    .years {
-      min-width: fit-content;
-    }
-    .listText {
-      color: var(--main-color);
-      display: flex;
-      flex-direction: column;
 
-      .description {
-        max-height: 0px;
-        overflow: hidden;
-        margin-top: 20px;
-        transition: max-height 0.3s ease;
-        &.show {
-          max-height: 100%;
-        }
+    .listUpper {
+      color: var(--main-color);
+      justify-content: space-between;
+      display: flex;
+    }
+
+    .description {
+      max-height: 0px;
+      overflow: hidden;
+      margin-top: 20px;
+      transition: max-height 0.3s ease;
+      &.show {
+        max-height: 100%;
       }
     }
   }

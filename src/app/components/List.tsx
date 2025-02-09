@@ -36,18 +36,18 @@ const Item = (props: ListItemProps) => {
         <Image src={props.image} alt={props.title} />
       </div>
       <div className={styles.listContent}>
-        <div className={styles.listText} onClick={handleOpen}>
-          <strong>{props.title}</strong>
-          <p>{props.subtitle}</p>
-          {props.description && (
-            <div
-              className={`${styles.description} ${isOpen ? styles.show : ""}`}
-            >
-              {props.description}
-            </div>
-          )}
+        <div className={styles.listUpper} onClick={handleOpen}>
+          <div className={styles.listHeader}>
+            <strong>{props.title}</strong>
+            <p>{props.subtitle}</p>
+          </div>
+          <p className={styles.years}>{props.years}</p>
         </div>
-        <p className={styles.years}>{props.years}</p>
+        {props.description && (
+          <div className={`${styles.description} ${isOpen ? styles.show : ""}`}>
+            {props.description}
+          </div>
+        )}
       </div>
     </motion.div>
   );
